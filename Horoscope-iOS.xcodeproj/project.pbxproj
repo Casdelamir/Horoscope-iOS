@@ -15,6 +15,7 @@
 		6C86A7242C57AF6B00532DDF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C86A7232C57AF6B00532DDF /* Base */; };
 		6C86A72F2C57B0FF00532DDF /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86A72E2C57B0FF00532DDF /* Horoscope.swift */; };
 		6C86A7312C57B11C00532DDF /* HoroscopeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86A7302C57B11C00532DDF /* HoroscopeProvider.swift */; };
+		6CB20A5A2C58CED1002F761F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB20A592C58CED1002F761F /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6C86A7252C57AF6B00532DDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C86A72E2C57B0FF00532DDF /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
 		6C86A7302C57B11C00532DDF /* HoroscopeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeProvider.swift; sourceTree = "<group>"; };
+		6CB20A592C58CED1002F761F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		6C86A72D2C57B0CD00532DDF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6CB20A592C58CED1002F761F /* TableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				6C86A72F2C57B0FF00532DDF /* Horoscope.swift in Sources */,
 				6C86A71C2C57AF6800532DDF /* ListViewController.swift in Sources */,
 				6C86A7182C57AF6800532DDF /* AppDelegate.swift in Sources */,
+				6CB20A5A2C58CED1002F761F /* TableViewCell.swift in Sources */,
 				6C86A71A2C57AF6800532DDF /* SceneDelegate.swift in Sources */,
 				6C86A7312C57B11C00532DDF /* HoroscopeProvider.swift in Sources */,
 			);
