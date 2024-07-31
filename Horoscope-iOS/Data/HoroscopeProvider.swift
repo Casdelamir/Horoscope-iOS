@@ -13,7 +13,7 @@ class HoroscopeProvider {
     // Static list of horoscopes
     static let horoscopes: [Horoscope] = [
         Horoscope(id: "aries", name: "Aries", dateRange: "March 21 - April 19", imageName: "horoscope_icons/aries"),
-        Horoscope(id: "taurius", name: "Taurus", dateRange: "April 20 - May 20", imageName: "horoscope_icons/taurus"),
+        Horoscope(id: "Taurus", name: "Taurus", dateRange: "April 20 - May 20", imageName: "horoscope_icons/taurus"),
         Horoscope(id: "Gemini", name: "Gemini", dateRange: "May 21 - June 20", imageName: "horoscope_icons/gemini"),
         Horoscope(id: "Cancer", name: "Cancer", dateRange: "June 21 - July 22", imageName: "horoscope_icons/cancer"),
         Horoscope(id: "Leo", name: "Leo", dateRange: "July 23 - August 22", imageName: "horoscope_icons/leo"),
