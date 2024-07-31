@@ -39,6 +39,7 @@ class DailyHoroscopeViewController: UIViewController {
         heard = UIImage(systemName: "heart")
         
         loadData()
+        
         }
     
     
@@ -46,19 +47,19 @@ class DailyHoroscopeViewController: UIViewController {
             
             image.image = horoscope?.image
             name.text = horoscope?.name
-            getHoroscopeLuck()
+        getHoroscopeLuck(date: "daily")
         
         if defaults.string(forKey: "favorite") == horoscope?.id {
                 favoriteButton.setImage(fullHeard, for: .normal)
             }
         }
     
-    func getHoroscopeLuck() {
+    func getHoroscopeLuck(date: String) {
             Task {
                 do {
                     load.startAnimating()
                     prediction.isHidden = true
-                    let luck = try await HoroscopeProvider.getHoroscopeLuck(horoscopeId: horoscope!.id)
+                    let luck = try await HoroscopeProvider.getHoroscopeLuck(horoscopeId: horoscope!.id, date: date)
                     
                     prediction.text = luck
                     load.stopAnimating()
@@ -70,6 +71,7 @@ class DailyHoroscopeViewController: UIViewController {
                 }
             }
         }
+
     
     @IBAction func clickButtonFavorite(_ sender: UIButton) {
         if defaults.string(forKey: "favorite") == horoscope?.id {
@@ -82,4 +84,17 @@ class DailyHoroscopeViewController: UIViewController {
             print("Item marked as favorite")
         }
     }
+
+    @IBAction func clickOnDaily(_ sender: UIBarButtonItem) {
+        getHoroscopeLuck(date: "daily")
+    }
+    
+    @IBAction func clickOnWeekly(_ sender: UIBarButtonItem) {
+        getHoroscopeLuck(date: "weekly")
+    }
+    
+    @IBAction func clickOnMothly(_ sender: UIBarButtonItem) {
+        getHoroscopeLuck(date: "monthly")
+    }
+    
 }

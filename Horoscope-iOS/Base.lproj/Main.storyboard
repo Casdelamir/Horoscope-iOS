@@ -97,7 +97,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="P31-Fb-vfJ">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="P31-Fb-vfJ">
                                         <rect key="frame" x="8" y="371" width="377" height="336"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -119,8 +119,43 @@
                                             <action selector="clickButtonFavorite:" destination="5W1-fl-XBd" eventType="touchUpInside" id="dI2-91-kjd"/>
                                         </connections>
                                     </button>
+                                    <tabBar contentMode="scaleToFill" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="pY7-gx-ObT">
+                                        <rect key="frame" x="0.0" y="666" width="393" height="49"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <items>
+                                            <tabBarItem title="Daily" image="day" selectedImage="day.fill" id="39x-yp-gnV"/>
+                                            <tabBarItem title="Weekly" image="week" selectedImage="week.fill" id="bCw-oc-Ins"/>
+                                            <tabBarItem title="Monthly" image="month" selectedImage="month.fill" id="0KN-Fi-jl3"/>
+                                        </items>
+                                    </tabBar>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BgG-iz-iyD">
+                                        <rect key="frame" x="0.0" y="596" width="393" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <items>
+                                            <barButtonItem title="Daily" image="day" largeContentSizeImage="day.fill" width="118" changesSelectionAsPrimaryAction="YES" id="VY4-bS-6cD">
+                                                <connections>
+                                                    <action selector="clickOnDaily:" destination="5W1-fl-XBd" id="pVU-mb-8af"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Weekly" image="week" width="157" id="o4L-OO-gWS">
+                                                <connections>
+                                                    <action selector="clickOnWeekly:" destination="5W1-fl-XBd" id="DG6-ft-JcW"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Monthly" image="month" width="116" id="gdo-ha-5TD">
+                                                <connections>
+                                                    <action selector="clickOnMothly:" destination="5W1-fl-XBd" id="nO1-mu-4ah"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="pY7-gx-ObT" firstAttribute="leading" secondItem="rIX-XI-qvJ" secondAttribute="leading" id="0Wk-O9-G0P"/>
+                                    <constraint firstAttribute="bottom" secondItem="pY7-gx-ObT" secondAttribute="bottom" id="VMf-4X-EUc"/>
+                                    <constraint firstAttribute="trailing" secondItem="pY7-gx-ObT" secondAttribute="trailing" id="Wuo-bP-MFc"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="baK-5X-lkr"/>
@@ -164,7 +199,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="day" width="25" height="25"/>
+        <image name="day.fill" width="25" height="25"/>
         <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="month" width="25" height="25"/>
+        <image name="month.fill" width="25" height="25"/>
+        <image name="week" width="25" height="25"/>
+        <image name="week.fill" width="25" height="25"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
